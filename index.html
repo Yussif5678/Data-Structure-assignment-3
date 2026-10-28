@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StackLab — Learn Stacks</title><link rel="stylesheet" href="style.css"><script src="script.js" defer></script>
+</head>
+<body>
+<header class="topbar"><a class="brand" href="#"><span class="logo">S</span> Stack<span class="green">Lab</span></a><span class="top-label">DATA STRUCTURES PLAYGROUND</span></header>
+<main class="container">
+  <section class="intro"><div class="eyebrow">● INTERACTIVE LEARNING TOOL</div><h1>Understand <span>Stacks</span><br>by doing.</h1><p>Explore the Last In, First Out (LIFO) principle using a simple text editor. Every edit is a stack operation in action.</p></section>
+  <section class="workspace">
+    <article class="panel editor-panel"><div class="panel-head"><div><small>PLAYGROUND / 01</small><h2>Text editor</h2></div><span class="live">● LIVE</span></div>
+      <label for="editor">YOUR TEXT</label><textarea id="editor" spellcheck="false">Welcome to StackLab!</textarea>
+      <div class="actions"><button id="undoBtn" disabled>↶ Undo <kbd>Ctrl Z</kbd></button><button class="primary" id="redoBtn" disabled>Redo ↷ <kbd>Ctrl Y</kbd></button></div>
+      <div class="meta"><span id="charCount">19 characters</span><span id="stateLabel">Initial state saved</span></div>
+      <p class="tip"><b>Try it:</b> type a few words, press Undo, then Redo. Watch how the stacks change.</p>
+    </article>
+    <div class="stack-column">
+      <article class="panel stack-panel"><div class="panel-head"><div><small>STACK / 01</small><h2>Undo stack</h2></div><span class="count" id="undoCount">0 items</span></div><p>Previous text states waiting to be restored.</p><div id="undoStack" class="stack" aria-live="polite"></div><div class="stack-foot">↓ POP removes the top item</div></article>
+      <article class="panel stack-panel redo-panel"><div class="panel-head"><div><small>STACK / 02</small><h2>Redo stack</h2></div><span class="count" id="redoCount">0 items</span></div><p>States you can bring back after undoing.</p><div id="redoStack" class="stack" aria-live="polite"></div><div class="stack-foot">↓ REDO restores the top item</div></article>
+    </div>
+  </section>
+  <section class="lower">
+    <article class="panel explanation"><small>THE CORE CONCEPT</small><h2>Last In, First Out <span class="lifo">LIFO</span></h2><p>A stack works like a pile of books: the last book placed on top is the first one removed. New text states are pushed onto the undo stack. Undo pops a state and pushes it to the redo stack.</p><div class="operations"><div><b class="push">＋</b><strong>Push</strong><small>Add an item to the top.</small></div><div><b class="pop">−</b><strong>Pop</strong><small>Remove the top item.</small></div><div><b class="peek">◎</b><strong>Peek</strong><small>View the top item.</small></div></div></article>
+    <article class="panel history"><div class="panel-head"><div><small>SESSION LOG</small><h2>Operation history</h2></div><button class="clear" id="clearHistoryBtn">Clear</button></div><ol id="historyList"><li class="empty">Your actions will appear here.</li></ol></article>
+  </section>
+  <footer><span>StackLab / Stack Data Structure Demo</span><span>Built for learning • HTML, CSS &amp; JavaScript</span></footer>
+</main>
+</body></html>
